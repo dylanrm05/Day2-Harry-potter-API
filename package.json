@@ -4,22 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
     "dev": "nodemon index.js",
     "start": "node index.js"
-=======
-    "dev": "nodemon index.js"
->>>>>>> origin/main
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-<<<<<<< HEAD
     "dotenv": "^16.4.5",
-=======
->>>>>>> origin/main
     "express": "^4.19.2"
   },
   "devDependencies": {
