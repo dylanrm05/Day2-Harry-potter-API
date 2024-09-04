@@ -1,11 +1,13 @@
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 4000
 
 const characters = require('./harrypotter.json')
 //middleware
 app.use(express.json())
+app.use(cors())
 
 app.get('/',(req,res)=>{
     res.send("Hello Harry Potter Characters")
