@@ -55,8 +55,18 @@ app.delete("/characters/:name",(req,res)=>{
     }
 })
 
-//homework-create a patch request to update the name of the character
+app.patch("/characters/:name",(req,res)=>{
+    const name=req.params.name.toLowerCase()
+    const character=characters.find((character)=>character.name.toLowerCase()==name)
+    const newCharacterName=req.body.name
 
+    if(character==undefined){
+        res.status(404).send("The character does not exist")
+    }else{
+        character.name=newCharacterName
+        res.status(200).send(character)
+    }
+})
 app.listen(port,()=>{
     console.log(`App listening on port ${port}`)
 })
